@@ -1,0 +1,13 @@
+$ vagrant plugin install vagrant-hostmanager
+
+to check all vms status
+    $ vagrant global-status
+    $ vagrant global-status --prune 
+        clear all state entries if any
+    $ vagrant up
+    $ vagrant halt  // shut downs vms
+    $ vagrant destroy --force // deletes vms
+to rebbot vms
+    $ vagrant reload <vm>
+    $ vagrant reload --> reboots all vms
+    $  vagrant ssh db01
