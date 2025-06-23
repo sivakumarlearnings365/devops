@@ -15,3 +15,8 @@ greetings=hello
 sub="world"
 message="$greetings, $sub"
 echo $message
+
+#length of the string
+string="siva kumar reddy"
+length=${#string}
+echo "length is: $length"
