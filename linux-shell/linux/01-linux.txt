@@ -1,0 +1,89 @@
+1)curl vs wget:
+2)process
+3)jobs
+
+1)curl vs wget:
+--------------
+=================
+
+    wget --> download
+    curl --> API testing(post, put), download, upload FTP, SFTP
+
+    curl is faster than wget
+
+    cmnds:
+    --------
+    $ wget https://<URL>
+    $ curl -O https://<URL>
+
+    APIs / POST Requests (for curl)
+    ------------------------------------
+    ✅ JSON placeholder API (mock)
+    curl https://jsonplaceholder.typicode.com/posts/1
+    ✅ POST with JSON
+    curl -X POST https://jsonplaceholder.typicode.com/posts \
+    -H "Content-Type: application/json" \
+    -d '{"title":"foo","body":"bar","userId":1}'
+
+2)process
+--------
+===========
+
+    process mangement:
+    ------------------
+    running process:
+        1)view the process
+        2)controlling execution(stop, start, pause, resume)
+        3)terminating unreponsive process
+        4)monitoring resources
+        5)running foreground/background
+        6)automating
+
+    cmnds:
+    -----------------
+    $ ps  --> shows process associated with current shell session
+    $ ps -e --> all process running system 
+    $ ps aux --> shows all info %CPU, %MEM 
+    $ ps -ef  --> shows all process parent child included
+
+    process monitor command:
+    ----------------------
+    $ top 
+        c -> sort by cpu usage
+        m -> memory
+        k -> kill
+
+        
+        PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+        1 root      20   0  109580  17628  11128 S   0.0   0.4   0:00.92 systemd
+        2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd
+
+        PR -> priority of process, less value high priority, default 20
+        NI -> niece value -ve high priority
+        VIRT -> virtual memory
+        RES -> resident ser size , actual physical memory
+
+    $ htop -> adanced of top interactive
+
+    
+3) jobs -> shows jobs running
+-----------------------------
+===============================
+
+    $ jobs
+    $ sleep 100
+        cntrl + c -> killl command
+        cntrl + z -> stops command 
+        $ bg %1   # Resume the first stopped job in the background
+        $ fg %1   # Bring the first background job to the foreground
+
+    Changing Process Priority: 
+        $ nice -n 10 sleep 100 & 
+        $ renice -n 5 -p 4567   # Change the nice value of process 4567 to 5
+
+    checking process command detail:
+    -----------------------------
+    $ cat /proc/8800/cmdline
+
+
+
