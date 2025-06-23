@@ -20,3 +20,10 @@ echo $message
 string="siva kumar reddy"
 length=${#string}
 echo "length is: $length"
+
+#command substitute
+current_date=`date +%H:%M:%S`
+echo "current date is : $current_date"
+
+current_time=$(date +%H:%M)
+echo "time is $current_time"
